@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Inter:wght@100;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+	--font-cabin: 'Cabin', sans-serif;
+	--font-inter: 'Inter', sans-serif;
+	--font-popins: 'Poppins', sans-serif;
+	--text-grey: #a8a8a8;
+	--btn-color: #20262C;
+	--text-light: #A7ABB4 --linear: linear-gradient(180deg, #64BDD8 0%, #48C187 100%);
+	--white: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #0D1014;
+	color: white !important;
+}
+
+/*Header*/
+header {
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+	font-family: var(--font-inter);
+
+}
+
+.hcontainer {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	z-index: 1;
+}
+
+.hcontainer span {
+	position: relative;
+	display: block;
+	width: 8px;
+	height: 8px;
+	margin: 2px;
+}
+
+.hcontainer span::before {
+	content: '';
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 70%;
+	height: 70%;
+	background: #48C187;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: 2s;
+	box-shadow: 0 0 1px #64BDD8,
+		0 0 1.5px #48C187,
+		0 0 2px #48C187;
+		filter: blur(4px);
+}
+
+.hcontainer span:hover::before {
+	transform: scale(1);
+	transition: 0s;
+}
+
+header nav {
+	width: min(90%, 1385px);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 10;
+	pointer-events: none;
+}
+
+.brand a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: initial;
+	cursor: pointer;
+	font-family: var(--font-popins);
+	text-decoration: none;
+	color: var(--white);
+}
+
+.navItem {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.navLink {
+	list-style: none;
+	margin: 0 15px;
+	cursor: pointer;
+	pointer-events: auto;
+	color: var(--text-grey);
+}
+
+.navLink a {
+	text-decoration: none;
+	color: inherit;
+	transition: 0.2s ease-in-out;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	text-transform: capitalize;
+}
+
+.navLink a:hover {
+	color: var(--white);
+}
+
+header button {
+	pointer-events: initial;
+	cursor: pointer;
+}
+
+.getStarted {
+	background: var(--btn-color);
+	border: none;
+	color: white;
+	padding: 8px 15px;
+	border-radius: 28.4069px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.getStarted svg {
+	color: var(--white);
+	font-size: 0.7rem;
+	position: relative;
+	top: 1.1px;
+	margin-left: 3px;
+	transition: 0.2s ease-in-out;
+}
+
+.getStarted:hover svg {
+	animation: 0.8s animate linear infinite;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateX(0px);
+	}
+
+	100% {
+		transform: translateX(4px);
+	}
+}
+
+.hamburger {
+	display: none;
+}
+
+/*Container*/
+.container {
+	width: min(90%, 1385px);
+	margin: 0 auto;
+}
+
+/*Landing Section*/
+main {
+	height: 70vh;
+}
+
+.hero {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.hero h4 {
+	font-family: var(--font-cabin);
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
+	text-transform: capitalize;
+	background: linear-gradient(180deg, #64BDD8 0%, #48C187 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+
+.hero h1 {
+	font-family: 'Cabin';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 70px;
+	line-height: 90px;
+	text-align: center;
+	text-transform: capitalize;
+	color: #FFFFFF;
+	margin-top: 24px;
+	margin-bottom: 20px;
+}
+
+.swiperContain {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	width: min(768px, 90%);
+	margin-bottom: 40px;
+}
+
+.swiper {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-right: 30px;
+}
+
+.swiper-slide {
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.swiper-slide h5 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0.839385px solid #20262C;
+	width: 99%;
+	border-radius: 20.1453px;
+	padding: 8px 0;
+	font-family: var(--font-cabin);
+	font-style: normal;
+	font-weight: 600;
+	font-size: 13.0571px;
+	line-height: 16px;
+	text-align: center;
+	text-transform: capitalize;
+
+	color: var(--text-light);
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+
+.swiper-slide h5 svg {
+	transform: rotate(45deg);
+	position: relative;
+	top: 1px;
+	margin-right: 10px;
+	font-size: 1.2rem;
+}
+
+.swiper-slide-prev {
+	opacity: 0;
+	transition: 0.2s ease-out;
+}
+
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-bottom,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top {
+	background-image: none !important;
+}
+
+.swiper-slide-visible {
+	opacity: 1 !important;
+}
