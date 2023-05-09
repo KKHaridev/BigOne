@@ -184,7 +184,10 @@ header nav {
 
 header button {
     pointer-events: initial;
-    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
 }
 
 .getStarted {
@@ -193,9 +196,11 @@ header button {
     color: white;
     padding: 8px 15px;
     border-radius: 28.4069px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     cursor: pointer;
+    pointer-events: all;
 }
 
 .getStarted svg {
@@ -263,7 +268,7 @@ main {
 }
 
 .hero .button {
-    height: 40px;
+    height: 35px !important;
     font-size: 1rem;
 }
 
@@ -443,13 +448,13 @@ main {
 }
 
 .button {
-    height: 50px;
+    height: 40px;
     padding: 5px 2rem;
     border-radius: 25.4069px;
     font-family: var(--font-inter);
     font-style: normal;
     font-weight: 600;
-    font-size: 20.8631px;
+    font-size: 18.8631px;
     line-height: 33px;
     border: none;
     background: var(--btn-color);
@@ -457,6 +462,10 @@ main {
     cursor: pointer !important;
     transition: all 1s ease-in;
     opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .button:hover svg {
@@ -474,6 +483,7 @@ main {
 }
 
 .services {
+    padding-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -641,7 +651,7 @@ footer address span {
 
 .social svg {
     color: #64BDD8;
-    height: 37px;
+    height: 32px;
     transition: all 0.2s ease;
 
 }
@@ -939,7 +949,8 @@ footer address span {
     .links a {
         padding: 5px 0;
     }
-    .copyright{
+
+    .copyright {
         padding: 3rem 0 1rem 0;
     }
 }
